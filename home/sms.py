@@ -8,7 +8,7 @@ def envia_sms(contato):
     auth_token = config('TWILIO_AUTH_TOKEN')
     client = Client(account_sid, auth_token)
 
-    remetente = '+19853133312'  # REMETENTE OBS: NÚMERO DA CONTA TWILLO
+    remetente = config('NUMERO')  # REMETENTE OBS: NÚMERO DA CONTA TWILLO
     destino = '{contato}'  # DESTINATÁRIO, NECESSÁRIO CADASTRAR DESTINATÁRIO NO TILLO
 
     message = client.messages.create(
