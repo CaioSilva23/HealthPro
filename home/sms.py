@@ -4,8 +4,8 @@ from twilio.rest import Client
 # and set the environment variables. See http://twil.io/secure
 
 def envia_sms(contato):
-    account_sid = 'AC1d6cad3d7d0504e8d461277ac678bff2'
-    auth_token = '5999f2261e666b60b240d3a7da466e31'
+    account_sid = config('TWILIO_ACCOUNT_SID')
+    auth_token = config('TWILIO_AUTH_TOKEN')
     client = Client(account_sid, auth_token)
 
     remetente = '+19853133312'  # REMETENTE OBS: NÚMERO DA CONTA TWILLO
