@@ -4,4 +4,5 @@ from . import views
 
 urlpatterns = [
     path('home/', views.home, name='home' ),
+    path('enviasms', views.envia_smss, name='enviasms')
 ]

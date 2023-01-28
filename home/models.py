@@ -3,7 +3,7 @@ from django.db import models
 
 class Contato(models.Model):
     nome = models.CharField(max_length=70, blank=False, null=False)
-    celular = models.CharField(max_length=11, blank=False, null=False)
+    celular = models.CharField(max_length=14, blank=False, null=False)
     email = models.EmailField(null=True, blank=True)
 
     def __str__(self):
